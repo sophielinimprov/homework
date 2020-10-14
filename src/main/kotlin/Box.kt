@@ -1,8 +1,6 @@
 import java.util.*
 
 fun main(args: Array<String>) {
-    val box3 = Box3();
-   val box5 = Box5();
    val scanner = Scanner(System.`in`)
     print( "Please enter object's length: ")
     var length:Float=scanner.nextFloat()
@@ -13,9 +11,9 @@ fun main(args: Array<String>) {
 //    if (box3.validate(length, width, height)) println("Box3")
 //    else if (box5.validate(length, width, height)) println("Box5")
 //    else println("It's too big to contain!")
-    when(box3.validate(length,width,height)){
+    when(Box3().validate(length,width,height)){
         true -> println("Box3")
-        false -> if(box5.validate(length,width,height)) println("Box5") else println("It's too big to contain!")
+        false -> if(Box5().validate(length,width,height)) println("Box5") else println("It's too big to contain!")
     }
 
 }
